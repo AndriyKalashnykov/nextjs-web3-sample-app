@@ -13,7 +13,7 @@ We need to pass an environment variable to the docker run command using `-e NEXT
 Passing environment variables via `-e`:
 
 ```
-docker run --rm -p 3000:3000 -e NEXT_PUBLIC_MESSAGE='from docker!' nextjs-web3-sample-app
+docker run --rm -p 3000:3000 -e NEXT_PUBLIC_RPCENDPOINT='https://eth-mainnet-public.unifra.io' nextjs-web3-sample-app
 ```
 
 Passing environment variables via `--env-file`:
