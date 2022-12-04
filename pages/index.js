@@ -2,6 +2,8 @@ import styles from '../styles/Home.module.css'
 
 import getConfig from 'next/config';
 
+import { getLogger } from "../logging/log-util";
+
 const Version = 'v0.0.1'
 
 // https://www.topcoder.com/thrive/articles/api-routes-for-next-js
@@ -26,6 +28,9 @@ async function ClientClick(e) {
 export default function Home() {
     const {NEXT_PUBLIC_RPCENDPOINT} = processEnv;
     const rpcendpoint = NEXT_PUBLIC_RPCENDPOINT;
+
+    const logger = getLogger("home");
+    logger.info("a info message from Home");
 
     return (
         <div className={styles.container}>

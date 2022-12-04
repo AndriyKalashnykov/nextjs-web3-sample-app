@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   publicRuntimeConfig: {
     // remove private variables from processEnv
     processEnv: Object.fromEntries(
